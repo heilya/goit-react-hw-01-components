@@ -1,19 +1,21 @@
+import { Direction, Table, Tbody, Title } from "./transaction.styled";
+
 export const TransactionHistory = ({ items }) => (
-    <table class="transaction-history">
+    <Table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <Title>Type</Title>
+      <Title>Amount</Title>
+      <Title>Currency</Title>
     </tr>
   </thead>
 
-  <tbody>
+  <Tbody>
     {items.map(item =>(<tr>
-      <td>{item.type}</td>
-      <td>{item.amount}</td>
-      <td>{item.currency}</td>
+      <Direction>{item.type}</Direction>
+      <Direction>{item.amount}</Direction>
+      <Direction>{item.currency}</Direction>
     </tr>))}
-  </tbody>
-</table>
+  </Tbody>
+</Table>
 );
