@@ -2,7 +2,7 @@ import { Label, StatList, StatListItem, Title, Wrapper, generateDarkBackgroundCo
 
 export const Statistics = ({ title, stats }) => (
     <Wrapper>
-        {title?(<Title>{title}</Title>):<></>}
+        {title&&<Title>{title}</Title>}
   <StatList>
 {stats.map(item => (<StatListItem style={{
             backgroundColor: generateDarkBackgroundColor()
